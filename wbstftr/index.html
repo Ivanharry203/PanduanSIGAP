@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutorial Akses SIGAP - SMAN 5 Magelang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Tutorial Akses Fitur SIGAP</h1>
+      <p class="subtitle">Panduan lengkap untuk mengakses Sistem Intervensi Gangguan Anak dan Pengawasan SMAN 5 Magelang</p>
+    </header>
+
+    <div class="dropdown-container">
+      <label for="role">Pilih Peran Anda:</label>
+      <select id="role" onchange="tampilkanCard()">
+        <option value="">-- Pilih peran Anda --</option>
+        <option value="murid">Murid</option>
+        <option value="guru">Wali Kelas</option>
+      </select>
+    </div>
+
+    <div id="card-container">
+      <div class="no-selection">
+        <i class="fas fa-file-pdf pdf-icon"></i>
+        <p>Silakan pilih peran Anda untuk melihat panduan akses dalam format PDF</p>
+      </div>
+    </div>
+  </div>
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="tutupPopup()">&times;</span>
+      <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
